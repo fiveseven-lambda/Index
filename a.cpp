@@ -23,14 +23,10 @@ int main(){
 	int a[60];
 	for(Index i(60); i(); ++i) a[i] = i;
 
-	for(Index i(5); i(); ++i){
-		for(Index j(6); j(); ++j){
-			std::cout << "(";
-			for(Index k(2); k(); ++k){
-				std::cout << a[i, j, k] << "),"[k(1)];
-			}
-			std::cout << "\n "[j(1)];
-		}
+	for(Index i(5); i(); ++i) for(Index j(6); j(); ++j){
+		std::cout << "(";
+		for(Index k(2); k(); ++k) std::cout << a[i, j, k] << k(1)["),"];
+		std::cout << j(1)["\n "];
 	}
 
 	const Index i(10, 5), j(6, 2);
